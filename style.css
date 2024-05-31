@@ -1,0 +1,464 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --color-gold: linear-gradient(
+    135deg,
+    rgba(174, 134, 37, 1),
+    rgba(247, 239, 138, 1),
+    rgba(210, 172, 71, 1),
+    rgba(237, 201, 103, 1)
+  );
+}
+
+body {
+  background-image: url(assents/Background.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+body header #gold {
+  width: 100%;
+  height: 45rem;
+  position: relative;
+
+  background: linear-gradient(
+    135deg,
+    rgba(174, 134, 37, 0.39),
+    rgba(247, 239, 138, 0.39),
+    rgba(210, 172, 71, 0.39),
+    rgba(237, 201, 103, 0.39)
+  );
+}
+
+#switch {
+  position: relative;
+  width: 6.4rem;
+
+  top: 10%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+#switch button {
+  width: 2.4rem;
+  height: 2.4rem;
+  background: black;
+  border: 3px solid white;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px;
+
+  position: absolute;
+
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+
+  animation: slide-back 0.5s;
+  cursor: pointer;
+}
+
+.us #switch button {
+  animation: slide-in 0.5s forwards;
+}
+
+#switch span {
+  display: block;
+  width: 6.4rem;
+  height: 2.4rem;
+
+  background: white;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  border-radius: 999.9rem;
+
+  box-shadow: 1px 0.1px 10px;
+}
+
+header p {
+  position: absolute;
+  top: 15%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+
+  font-size: 1.4rem;
+  color: black;
+  font-weight: bold;
+  font-family: "Noto Serif Bengali";
+
+  cursor: pointer;
+}
+
+body header img {
+  width: 40rem;
+  height: 40rem;
+
+  position: absolute;
+
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* border: 1px solid red; */
+}
+
+body header h1 {
+  position: absolute;
+
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: rgba(0, 0, 0, 0.48);
+
+  font-size: 2.1rem;
+  font-family: "Noto Serif Display";
+}
+
+body header #arrow {
+  position: absolute;
+  top: 85%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+
+  font-size: 6rem;
+
+  color: rgba(0, 0, 0, 0.46);
+
+  animation: bounce 2s infinite;
+}
+
+/* main {
+
+} */
+
+main #glass {
+  width: 118.6rem;
+  height: 40rem;
+
+  margin: auto;
+  margin-top: 4rem;
+
+  border-radius: 3rem;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  display: flex;
+  justify-content: space-between;
+
+  /* box-shadow: 0.1px 0.1px 10px 0.00001px; */
+
+  /* border: 1px solid red; */
+}
+
+main #myself img {
+  width: 35rem;
+  height: 60rem;
+
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+
+  /* border: 1px solid red; */
+}
+
+main #aboutMe {
+  width: 56.2rem;
+
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+}
+
+main #aboutMe #glassaboutme {
+  width: 23.8rem;
+  border-radius: 0.8rem;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  margin: auto;
+
+  margin-bottom: 2rem;
+
+  font-size: 1.7rem;
+
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0.1px 0.1px 10px 0.1px;
+}
+
+main #aboutMe #glassaboutme h2 {
+  width: 19rem;
+  height: 4rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  margin-left: 0.2rem;
+
+  text-align: center;
+
+  background-image: linear-gradient(
+    135deg,
+    rgba(174, 134, 37, 1),
+    rgba(247, 239, 138, 1),
+    rgba(210, 172, 71, 1),
+    rgba(237, 201, 103, 1)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  font-family: "Noto Serif Bengali";
+}
+
+main #aboutMe #glassaboutme ion-icon {
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 0.5rem;
+  margin: auto;
+
+  color: rgba(0, 0, 0, 0.456);
+
+  background-image: linear-gradient(
+    135deg,
+    rgba(174, 134, 37, 1),
+    rgba(247, 239, 138, 1),
+    rgba(210, 172, 71, 1),
+    rgba(237, 201, 103, 1)
+  );
+}
+
+main #aboutMe p {
+  font-size: 1rem;
+  font-family: "Noto Serif Bengali";
+  font-weight: bold;
+}
+
+#glassHability {
+  width: 118.6rem;
+  height: 30rem;
+
+  margin: auto;
+  margin-top: 5.6rem;
+  border-radius: 3rem;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  padding-left: 4rem;
+  padding-right: 4rem;
+
+  /* box-shadow: 0.1px 0.1px 10px 0.00001px; */
+}
+
+section #glassHability #org {
+  display: flex;
+
+  width: 100rem;
+  margin-top: 2rem;
+
+  border-radius: 0.8rem;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0.1px 0.1px 10px 0.1px;
+}
+
+section #glassH1Hability {
+  width: 30.5rem;
+
+  margin: auto;
+
+  font-size: 1.7rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+#glassH1Hability h2 {
+  width: 25.5rem;
+  height: 4rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+
+  background-image: linear-gradient(
+    135deg,
+    rgba(174, 134, 37, 1),
+    rgba(247, 239, 138, 1),
+    rgba(210, 172, 71, 1),
+    rgba(237, 201, 103, 1)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  font-family: "Noto Serif Bengali";
+
+  box-shadow: 1px 1px 10px;
+}
+
+/* section #glassH1Hability ion-icon {
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 0.5rem;
+  margin: auto;
+
+  color: rgba(0, 0, 0, 0.456);
+
+  background-image: linear-gradient(
+    135deg,
+    rgba(174, 134, 37, 1),
+    rgba(247, 239, 138, 1),
+    rgba(210, 172, 71, 1),
+    rgba(237, 201, 103, 1)
+  );
+} */
+
+section #Hability {
+  margin-top: 5rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+section #Hability .Block {
+  width: 10rem;
+  height: 15rem;
+
+  border-radius: 0.8rem;
+
+  background-image: linear-gradient(
+    135deg,
+    rgba(174, 134, 37, 1),
+    rgba(247, 239, 138, 1),
+    rgba(210, 172, 71, 1),
+    rgba(237, 201, 103, 1)
+  );
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  margin: auto;
+
+  box-shadow: 2px 5px 10px;
+}
+
+section #Hability .Block h3 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+section #Hability .Block ion-icon {
+  font-size: 7rem;
+  margin: auto;
+}
+
+footer {
+  width: 100%;
+  height: 20rem;
+
+  margin-top: 10rem;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+footer #group {
+  width: 25.6rem;
+  height: 4.8rem;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  gap: 2.9rem;
+}
+
+footer #github {
+  border-radius: 4rem;
+}
+footer #linkedin {
+  border-radius: 0.5rem;
+}
+footer #email {
+  border-radius: 0.5rem;
+
+  width: 4.7rem;
+  height: 4.8rem;
+}
+
+footer div a {
+  text-decoration: none;
+  color: black;
+}
+
+footer div ion-icon {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+footer #github:hover,
+#linkedin:hover,
+#email:hover {
+  background-image: linear-gradient(
+    135deg,
+    rgba(174, 134, 37, 1),
+    rgba(247, 239, 138, 1),
+    rgba(210, 172, 71, 1),
+    rgba(237, 201, 103, 1)
+  );
+}
+
+footer #line {
+  margin: 10rem;
+}
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 65%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 65%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
