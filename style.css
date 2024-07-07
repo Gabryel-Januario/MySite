@@ -21,6 +21,14 @@ body {
   background-position: center;
   background-size: cover;
   height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+body header {
+  width: 100%;
 }
 
 body header #gold {
@@ -35,10 +43,13 @@ body header #gold {
     rgba(210, 172, 71, 0.39),
     rgba(237, 201, 103, 0.39)
   );
+
+  box-sizing: border-box;
 }
 
 #switch {
   position: relative;
+  z-index: 10;
   width: 6.4rem;
 
   top: 10%;
@@ -86,7 +97,7 @@ body header #gold {
 
 header p {
   position: absolute;
-  top: 15%;
+  top: 15.5%;
   left: 95%;
   transform: translate(-50%, -50%);
 
@@ -107,8 +118,6 @@ body header img {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  /* border: 1px solid red; */
 }
 
 body header h1 {
@@ -121,6 +130,7 @@ body header h1 {
   color: rgba(0, 0, 0, 0.48);
 
   font-size: 2.1rem;
+  letter-spacing: 3px;
   font-family: "Noto Serif Display";
 }
 
@@ -137,13 +147,9 @@ body header #arrow {
   animation: bounce 2s infinite;
 }
 
-/* main {
-
-} */
-
 main #glass {
   width: 118.6rem;
-  height: 40rem;
+  height: 50rem;
 
   margin: auto;
   margin-top: 4rem;
@@ -156,10 +162,6 @@ main #glass {
 
   display: flex;
   justify-content: space-between;
-
-  /* box-shadow: 0.1px 0.1px 10px 0.00001px; */
-
-  /* border: 1px solid red; */
 }
 
 main #myself img {
@@ -170,8 +172,6 @@ main #myself img {
   top: 50%;
   left: 25%;
   transform: translate(-50%, -50%);
-
-  /* border: 1px solid red; */
 }
 
 main #aboutMe {
@@ -241,7 +241,7 @@ main #aboutMe #glassaboutme ion-icon {
 }
 
 main #aboutMe p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-family: "Noto Serif Bengali";
   font-weight: bold;
 }
@@ -279,7 +279,7 @@ section #glassHability #org {
 }
 
 section #glassH1Hability {
-  width: 30.5rem;
+  width: 32.5rem;
 
   margin: auto;
 
@@ -290,7 +290,7 @@ section #glassH1Hability {
 }
 
 #glassH1Hability h2 {
-  width: 25.5rem;
+  width: 26.5rem;
   height: 4rem;
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
@@ -314,23 +314,6 @@ section #glassH1Hability {
 
   box-shadow: 1px 1px 10px;
 }
-
-/* section #glassH1Hability ion-icon {
-  width: 3.8rem;
-  height: 3.8rem;
-  border-radius: 0.5rem;
-  margin: auto;
-
-  color: rgba(0, 0, 0, 0.456);
-
-  background-image: linear-gradient(
-    135deg,
-    rgba(174, 134, 37, 1),
-    rgba(247, 239, 138, 1),
-    rgba(210, 172, 71, 1),
-    rgba(237, 201, 103, 1)
-  );
-} */
 
 section #Hability {
   margin-top: 5rem;
@@ -370,6 +353,161 @@ section #Hability .Block h3 {
 section #Hability .Block ion-icon {
   font-size: 7rem;
   margin: auto;
+}
+
+section #glassProject {
+  width: 90rem;
+  height: 90rem;
+
+  margin: auto;
+  margin-top: 5.6rem;
+  border-radius: 3rem;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+section #glassProject #titleProject {
+  width: 25rem;
+  margin: auto;
+  display: flex;
+}
+
+section #glassProject #titleProjectOrg {
+  display: flex;
+  width: 20rem;
+  height: 6rem;
+  margin: auto;
+  margin-top: 2rem;
+
+  border-radius: 0.8rem;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow: 0.1px 0.1px 10px 0.1px;
+}
+
+section #glassProject #titleProject h2 {
+  text-align: center;
+  font-size: 3.5rem;
+
+  width: 23.5rem;
+  height: 6rem;
+  margin: auto;
+  margin-bottom: 0.8rem;
+
+  text-align: center;
+
+  background-image: linear-gradient(
+    135deg,
+    rgba(174, 134, 37, 1),
+    rgba(247, 239, 138, 1),
+    rgba(210, 172, 71, 1),
+    rgba(237, 201, 103, 1)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  font-family: "Noto Serif Bengali";
+
+  box-shadow: 1px 1px 10px;
+}
+
+section #glassProject #Projects {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+section #glassProject .blockProject {
+  width: 55rem;
+  height: 20rem;
+
+  border-radius: 0.8rem;
+
+  background-image: linear-gradient(
+    135deg,
+    rgba(174, 133, 37, 0.5),
+    rgba(247, 239, 138, 0.5),
+    rgba(210, 172, 71, 0.5),
+    rgba(237, 201, 103, 0.5)
+  );
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  margin: auto;
+
+  box-shadow: 2px 5px 10px;
+}
+
+section #glassProject .blockProject a {
+  text-decoration: none;
+  color: black;
+}
+
+section #glassProject .blockProject #title {
+  padding-top: 1rem;
+  display: flex;
+
+  font-size: 2.5rem;
+}
+
+section #glassProject .blockProject #title ion-icon {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 0.8rem;
+}
+section #glassProject .blockProject #title h3 {
+  margin-left: 0;
+}
+section #glassProject .blockProject #title #link {
+  margin: auto;
+  margin-right: 1rem;
+}
+
+section #glassProject .blockProject p {
+  font-size: 1.5rem;
+
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+section #glassProject .blockProject #Tools {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  margin: auto;
+  margin-left: 2rem;
+}
+
+section #glassProject .blockProject .blockTools {
+  height: 3rem;
+
+  border-radius: 0.1rem;
+
+  background-image: linear-gradient(
+    135deg,
+    rgba(174, 134, 37, 1),
+    rgba(247, 239, 138, 1),
+    rgba(210, 172, 71, 1),
+    rgba(237, 201, 103, 1)
+  );
+  display: flex;
+
+  border-radius: 0.8rem;
+
+  box-shadow: 0.1px 1px 5px;
+}
+
+section #glassProject .blockProject .blockTools h4 {
+  margin: auto;
+  font-size: 1.2rem;
+  padding: 0.5rem;
 }
 
 footer {
@@ -460,5 +598,124 @@ footer #line {
   }
   50% {
     transform: translateY(-20px);
+  }
+}
+
+@media (max-width: 1007px) {
+  body header {
+    width: 100%;
+  }
+
+  body header #gold {
+    width: 100%;
+  }
+
+  #switch {
+    top: 9%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+  }
+
+  header p {
+    top: 15%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+  }
+
+  body header h1 {
+    top: 73%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+
+    width: 27rem;
+  }
+
+  body header #arrow {
+    top: 85%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+
+    font-size: 5rem;
+  }
+
+  main #glass {
+    width: 90%;
+    height: 50rem;
+  }
+
+  main #myself img {
+    display: none;
+  }
+
+  main p {
+    margin-left: 2rem;
+  }
+
+  #glassHability {
+    width: 90%;
+    height: 35rem;
+  }
+
+  section #Hability {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+
+    height: 20rem;
+
+    gap: 2rem;
+  }
+
+  section #Hability .Block {
+    width: 6rem;
+    height: 8.5rem;
+  }
+
+  section #Hability .Block h3 {
+    font-size: 1.2rem;
+  }
+
+  section #Hability .Block ion-icon {
+    font-size: 3.5rem;
+  }
+
+  section #glassProject {
+    width: 90%;
+  }
+
+  section #glassProject #titleProjectOrg {
+    width: 18rem;
+    height: 5rem;
+  }
+
+  section #glassProject #titleProject h2 {
+    font-size: 3rem;
+  }
+
+  footer {
+    width: 100%;
+  }
+}
+
+@media (max-width: 725px) {
+  section #glassProject .blockProject {
+    width: 30rem;
+    height: 27rem;
+  }
+
+  section #glassProject {
+    height: 110rem;
+  }
+}
+@media (max-width: 600px) {
+  main #glass {
+    width: 90%;
+    height: 63rem;
+  }
+}
+
+@media (max-width: 460px) {
+  main #glass {
+    height: 75rem;
   }
 }
