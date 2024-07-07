@@ -730,4 +730,9 @@ footer #line {
     height: 30rem;
     flex-wrap: wrap;
   }
+
+  section #glassHability #org {
+    width: 26rem;
+    border: 1px solid red;
+  }
 }
