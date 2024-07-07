@@ -719,3 +719,15 @@ footer #line {
     height: 75rem;
   }
 }
+
+@media (max-width: 422px) {
+  #glassHability {
+    width: 90%;
+    height: 45rem;
+  }
+
+  section #Hability {
+    height: 30rem;
+    flex-wrap: wrap;
+  }
+}
