@@ -731,6 +731,10 @@ footer #line {
     flex-wrap: wrap;
   }
 
+  section #glassH1Hability {
+    width: 27rem;
+  }
+
   section #glassHability #org {
     width: 26rem;
     text-align: center;
