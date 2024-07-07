@@ -733,6 +733,8 @@ footer #line {
 
   section #glassHability #org {
     width: 26rem;
-    border: 1px solid red;
+    text-align: center;
+
+    border: 1px solid blue;
   }
 }
